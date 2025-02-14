@@ -219,7 +219,7 @@ function setupMusicPlayer() {
     bgMusic.load();
 
     // Try autoplay if enabled
-    if (config.music.autoplay) {
+    // if (config.music.autoplay) {
         const playPromise = bgMusic.play();
         if (playPromise !== undefined) {
             playPromise.catch(error => {
@@ -227,7 +227,7 @@ function setupMusicPlayer() {
                 musicToggle.textContent = config.music.startText;
             });
         }
-    }
+    // }
 
     // Toggle music on button click
     musicToggle.addEventListener('click', () => {
